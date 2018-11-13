@@ -336,16 +336,64 @@ namespace SudokuG
         }
         #endregion
         #region CheckInput
-        //public Boolean CheckInput()
-        //{
-        //    for (int i = 0; i < 9; i++)
-        //    {
-        //        for (int j = 0; j < 9; j++)
-        //        {
+        public Boolean checkInput() //check đề nhập vào có trùng cột, hàng, trong ô hay không.
+        {
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    if (b[i][j].Text != " ")
+                    {
+                        for (int k = i + 1; k < 9; ++k)  // kiem tra theo hang
+                        {
+                            if (b[k][j].Text != " ")
+                            {
+                                if (int.Parse(b[i][j].Text) == int.Parse(b[k][j].Text))
+                                    return false;
+                            }
+                        }
+                        for (int k = 0; k < i; ++k)  // kiem tra theo hang
+                        {
+                            if (b[k][j].Text != " ")
+                            {
+                                if (int.Parse(b[i][j].Text) == int.Parse(b[k][j].Text))
+                                    return false;
+                            }
+                        }
+                        for (int k = j + 1; k < 9; ++k)  // kiem tra theo hang
+                        {
+                            if (b[i][k].Text != " ")
+                            {
+                                if (int.Parse(b[i][j].Text) == int.Parse(b[i][k].Text))
+                                    return false;
+                            }
+                        }
+                        for (int k = 0; k < j; ++k)  // kiem tra theo hang
+                        {
+                            if (b[i][k].Text != " ")
+                            {
+                                if (int.Parse(b[i][j].Text) == int.Parse(b[i][k].Text))
+                                    return false;
+                            }
+                        }
+                        int boxRowOffset = (i / 3) * 3;
+                        int boxColOffset = (j / 3) * 3;
 
-        //        }
-        //    }
-        //}
+                        for (int k = 0; k < 3; ++k) //kiem tra trong 9 ô nhỏ
+                            for (int m = 0; m < 3; ++m)
+                                if ((boxRowOffset + k) != i && boxColOffset + m != j)
+                                {
+                                    if (b[boxRowOffset + k][boxColOffset + m].Text != " ")
+                                    {
+                                        if (int.Parse(b[i][j].Text) == int.Parse(b[boxRowOffset + k][boxColOffset + m].Text))
+                                            return false;
+                                    }
+                                }
+                    }
+                }
+            }
+            return true;
+        }
         #endregion
     }
 }

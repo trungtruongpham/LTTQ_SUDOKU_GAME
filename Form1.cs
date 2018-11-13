@@ -12,7 +12,6 @@ namespace SudokuG
 {
     public partial class Form1 : Form
     {
-	//ac
         #region Properties
         BoardGameManager BoardGame;
         #endregion
@@ -33,8 +32,6 @@ namespace SudokuG
             BoardGame.CreateSudoku(BoardGame.numofEmpty);
             timer1.Start();
         }
-
-        //Change
         private void button2_Click(object sender, EventArgs e)
         {
             BoardGame.Export();
@@ -114,6 +111,12 @@ namespace SudokuG
                 HourLabel.Text = "0" + hour;
             else
                 HourLabel.Text = hour.ToString();
+        }
+
+        private void CheckBtn_Click(object sender, EventArgs e)
+        {
+            if (BoardGame.checkInput() == false)
+                MessageBox.Show("Ban da nhap sai !");
         }
     }
 }

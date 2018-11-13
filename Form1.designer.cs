@@ -39,7 +39,7 @@
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.CheckBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.input9 = new System.Windows.Forms.Button();
             this.input8 = new System.Windows.Forms.Button();
@@ -57,6 +57,8 @@
             this.MinuteLabel = new System.Windows.Forms.Label();
             this.SecondLabel = new System.Windows.Forms.Label();
             this.HourLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -138,7 +140,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(471, 56);
+            this.button2.Location = new System.Drawing.Point(552, 56);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -146,14 +148,15 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // CheckBtn
             // 
-            this.button3.Location = new System.Drawing.Point(471, 27);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Check";
-            this.button3.UseVisualStyleBackColor = true;
+            this.CheckBtn.Location = new System.Drawing.Point(471, 27);
+            this.CheckBtn.Name = "CheckBtn";
+            this.CheckBtn.Size = new System.Drawing.Size(75, 23);
+            this.CheckBtn.TabIndex = 4;
+            this.CheckBtn.Text = "Check";
+            this.CheckBtn.UseVisualStyleBackColor = true;
+            this.CheckBtn.Click += new System.EventHandler(this.CheckBtn_Click);
             // 
             // panel1
             // 
@@ -167,7 +170,7 @@
             this.panel1.Controls.Add(this.input2);
             this.panel1.Controls.Add(this.input1);
             this.panel1.Controls.Add(this.input);
-            this.panel1.Location = new System.Drawing.Point(471, 163);
+            this.panel1.Location = new System.Drawing.Point(474, 152);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(127, 194);
             this.panel1.TabIndex = 5;
@@ -282,7 +285,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(552, 56);
+            this.button4.Location = new System.Drawing.Point(471, 56);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 10;
@@ -297,40 +300,60 @@
             // 
             // MinuteLabel
             // 
-            this.MinuteLabel.Location = new System.Drawing.Point(501, 111);
+            this.MinuteLabel.Location = new System.Drawing.Point(514, 110);
             this.MinuteLabel.Name = "MinuteLabel";
-            this.MinuteLabel.Size = new System.Drawing.Size(23, 23);
+            this.MinuteLabel.Size = new System.Drawing.Size(22, 23);
             this.MinuteLabel.TabIndex = 11;
             this.MinuteLabel.Text = "00";
             // 
             // SecondLabel
             // 
-            this.SecondLabel.Location = new System.Drawing.Point(530, 111);
+            this.SecondLabel.Location = new System.Drawing.Point(546, 111);
             this.SecondLabel.Name = "SecondLabel";
-            this.SecondLabel.Size = new System.Drawing.Size(33, 23);
+            this.SecondLabel.Size = new System.Drawing.Size(28, 23);
             this.SecondLabel.TabIndex = 12;
             this.SecondLabel.Text = "00";
             // 
             // HourLabel
             // 
-            this.HourLabel.Location = new System.Drawing.Point(471, 111);
+            this.HourLabel.Location = new System.Drawing.Point(483, 111);
             this.HourLabel.Name = "HourLabel";
             this.HourLabel.Size = new System.Drawing.Size(24, 23);
             this.HourLabel.TabIndex = 13;
             this.HourLabel.Text = "00";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(501, 110);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(10, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = ":";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(536, 111);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(10, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = ":";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(691, 458);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.HourLabel);
             this.Controls.Add(this.SecondLabel);
             this.Controls.Add(this.MinuteLabel);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.GameBoard);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.CheckBtn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
@@ -351,7 +374,7 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button CheckBtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button input9;
         private System.Windows.Forms.Button input8;
@@ -373,6 +396,8 @@
         private System.Windows.Forms.Label MinuteLabel;
         private System.Windows.Forms.Label SecondLabel;
         private System.Windows.Forms.Label HourLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
