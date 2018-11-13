@@ -21,7 +21,7 @@ namespace SudokuG
             BoardGame = new BoardGameManager(GameBoard);
             BoardGame.createBoard();
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void ImportBtn_Click(object sender, EventArgs e)
         {
             BoardGame.ImportData();
         }
@@ -32,7 +32,7 @@ namespace SudokuG
             BoardGame.CreateSudoku(BoardGame.numofEmpty);
             timer1.Start();
         }
-        private void button2_Click(object sender, EventArgs e)
+        private void ExportBtn_Click(object sender, EventArgs e)
         {
             BoardGame.Export();
         }
@@ -56,27 +56,7 @@ namespace SudokuG
             }
         }
 
-        private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void easyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            BoardGame.numofEmpty = 20;
-        }
-
-        private void mediumToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            BoardGame.numofEmpty = 40;
-        }
-
-        private void hardToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            BoardGame.numofEmpty = 60;
-        }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void SolveBtn_Click(object sender, EventArgs e)
         {
             BoardGame.Solve();
         }
@@ -117,6 +97,38 @@ namespace SudokuG
         {
             if (BoardGame.checkInput() == false)
                 MessageBox.Show("Ban da nhap sai !");
+        }
+
+        private void aboutUsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sudoku Game version 1.0");
+        }
+
+        private void easyToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            BoardGame.numofEmpty = 20;
+        }
+
+        private void mediumToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            BoardGame.numofEmpty = 40;
+        }
+
+        private void hardToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            BoardGame.numofEmpty = 60;
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int x = BoardGame.currentX;
+            int y = BoardGame.currentY;
+            BoardGame.b[x][y].Text = " ";
         }
     }
 }

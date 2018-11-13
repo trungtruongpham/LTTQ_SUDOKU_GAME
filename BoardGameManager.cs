@@ -108,6 +108,7 @@ namespace SudokuG
             SolveSudoku(temp, 0, 0);
         }
         #endregion
+
         #region CreateNewBoard
         public void createBoard()
         {
@@ -152,9 +153,10 @@ namespace SudokuG
                         b[i][j].BackColor = Color.FromName("Khaki");
                     }
                     b[i][j].Text = " ";
-                    b[i][j].ForeColor = Color.FromName("red");
+                    b[i][j].ForeColor = Color.FromName("Black");
                     b[i][j].Location = new Point(i * sz + sz, j * sz + sz);
                     b[i][j].Click += new EventHandler(button_Click);
+                    b[i][j].Font = new Font(b[i][j].Font, FontStyle.Bold);
                     box.Controls.Add(b[i][j]);
                 }
             }
@@ -170,6 +172,7 @@ namespace SudokuG
             currentY = y;
         }
         #endregion
+
         #region CreateNewSudoku
         public static void Init(ref int[][] grid)
         { 
@@ -248,6 +251,7 @@ namespace SudokuG
         }
 
         #endregion
+
         #region ClearSudoku
         public void ClearSudoku()
         {
@@ -260,6 +264,7 @@ namespace SudokuG
             }
         }
         #endregion
+
         #region Import-Export
         public void ImportData()
         {
@@ -335,6 +340,7 @@ namespace SudokuG
             }
         }
         #endregion
+
         #region CheckInput
         public Boolean checkInput() //check đề nhập vào có trùng cột, hàng, trong ô hay không.
         {
