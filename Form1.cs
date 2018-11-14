@@ -21,21 +21,19 @@ namespace SudokuG
             BoardGame = new BoardGameManager(GameBoard);
             BoardGame.createBoard();
         }
+        #region ImportExportFile
         private void ImportBtn_Click(object sender, EventArgs e)
         {
             BoardGame.ImportData();
         }
 
-        private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            BoardGame.ClearSudoku();
-            BoardGame.CreateSudoku(BoardGame.numofEmpty);
-            timer1.Start();
-        }
         private void ExportBtn_Click(object sender, EventArgs e)
         {
             BoardGame.Export();
         }
+        #endregion
+
+        #region Function
         private void buttonInput_Click(object sender, EventArgs e)
         {
             int x = BoardGame.currentX;
@@ -66,19 +64,19 @@ namespace SudokuG
             int min = int.Parse(MinuteLabel.Text);
             int hour = int.Parse(HourLabel.Text);
             sec++;
-            //Tang phut khi duoc 60s
+            //Tăng phút khi được 60s
             if (sec >= 60)
             {
                 min++;
                 sec -= 60;
             }
-            //Tang gio khi duoc 60p
-            if(min >= 60)
+            //Tăng giờ khi được 60p
+            if (min >= 60)
             {
                 min -= 60;
                 hour++;
             }
-            //Chuyen du lieu vao label sau khi chuan hoa
+            //Chuyển dữ liệu vào label sau khi thời gian được chuẩn hóa
             if (sec < 10)
                 SecondLabel.Text = "0" + sec;
             else
@@ -95,10 +93,34 @@ namespace SudokuG
 
         private void CheckBtn_Click(object sender, EventArgs e)
         {
+            //Kiểm tra xem giá trị nhập vào có đúng không
             if (BoardGame.checkInput() == false)
                 MessageBox.Show("Ban da nhap sai !");
+            //Kiểm tra xem người chơi đã chiến thắng chưa
+            if (BoardGame.checkGameCompleted())
+            {
+                DialogResult result = MessageBox.Show("Game completed ! ", "Thông báo", MessageBoxButtons.YesNoCancel);
+                if (result == DialogResult.Yes)
+                {
+                    BoardGame.ClearSudoku();
+                    BoardGame.CreateSudoku(BoardGame.numofEmpty);
+                    timer1.Start();
+                }
+                else if (result == DialogResult.No)
+                {
+                    this.Close();
+                }
+            }
         }
+        #endregion
 
+        #region MenuStrip
+        private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BoardGame.ClearSudoku();
+            BoardGame.CreateSudoku(BoardGame.numofEmpty);
+            timer1.Start();
+        }
         private void aboutUsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Sudoku Game version 1.0");
@@ -130,5 +152,6 @@ namespace SudokuG
             int y = BoardGame.currentY;
             BoardGame.b[x][y].Text = " ";
         }
+        #endregion
     }
 }

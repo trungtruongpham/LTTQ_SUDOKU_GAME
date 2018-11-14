@@ -401,5 +401,21 @@ namespace SudokuG
             return true;
         }
         #endregion
+
+        #region CheckGameCompleted
+        //Kiểm tra xem đã điền hết các ô chưa
+        public Boolean checkGameCompleted()
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    if (b[i][j].Text == " ")// Còn ô trống 
+                        return false;
+                }
+            }
+            return true;
+        }
+        #endregion
     }
 }
