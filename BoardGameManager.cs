@@ -243,9 +243,12 @@ namespace SudokuG
                 for (int j = 0; j < 9; j++)
                 {
                     if (a[i][j] == 0)
-                        b[i][i].Text = " ";
+                        b[i][j].Text = " ";
                     else
+                    {
                         b[i][j].Text = a[i][j].ToString();
+                        b[i][j].ForeColor = Color.FromName("Red");
+                    }
                 }
             }
         }
