@@ -99,7 +99,7 @@ namespace SudokuG
             //Kiểm tra xem người chơi đã chiến thắng chưa
             if (BoardGame.checkGameCompleted())
             {
-                DialogResult result = MessageBox.Show("Game completed ! ", "Thông báo", MessageBoxButtons.YesNoCancel);
+                DialogResult result = MessageBox.Show("Game completed ! Bạn có muốn tiếp tục chơi không ?", "Thông báo", MessageBoxButtons.YesNoCancel);
                 if (result == DialogResult.Yes)
                 {
                     BoardGame.ClearSudoku();
