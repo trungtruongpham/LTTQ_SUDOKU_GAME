@@ -263,6 +263,7 @@ namespace SudokuG
                 for (int j = 0; j < 9; j++)
                 {
                     b[i][j].Text = " ";
+                    b[i][j].ForeColor = Color.FromName("Black");
                 } 
             }
         }

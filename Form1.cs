@@ -150,7 +150,12 @@ namespace SudokuG
         {
             int x = BoardGame.currentX;
             int y = BoardGame.currentY;
-            BoardGame.b[x][y].Text = " ";
+            if (BoardGame.b[x][y].ForeColor == Color.FromName("Black"))
+            {
+                BoardGame.b[x][y].Text = " ";
+            }
+            else
+                MessageBox.Show("Bạn phải trỏ vào ô cần xóa !");
         }
         #endregion
     }
