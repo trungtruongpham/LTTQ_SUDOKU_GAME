@@ -46,9 +46,6 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ImportBtn = new System.Windows.Forms.Button();
-            this.ExportBtn = new System.Windows.Forms.Button();
-            this.CheckBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.input9 = new System.Windows.Forms.Button();
             this.input8 = new System.Windows.Forms.Button();
@@ -61,15 +58,20 @@
             this.input1 = new System.Windows.Forms.Button();
             this.input = new System.Windows.Forms.Button();
             this.GameBoard = new System.Windows.Forms.GroupBox();
-            this.SolveBtn = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.MinuteLabel = new System.Windows.Forms.Label();
             this.SecondLabel = new System.Windows.Forms.Label();
             this.HourLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -195,37 +197,6 @@
             this.aboutUsToolStripMenuItem.Text = "About us";
             this.aboutUsToolStripMenuItem.Click += new System.EventHandler(this.aboutUsToolStripMenuItem_Click);
             // 
-            // ImportBtn
-            // 
-            this.ImportBtn.Location = new System.Drawing.Point(567, 65);
-            this.ImportBtn.Name = "ImportBtn";
-            this.ImportBtn.Size = new System.Drawing.Size(75, 23);
-            this.ImportBtn.TabIndex = 2;
-            this.ImportBtn.Text = "Import";
-            this.ImportBtn.UseVisualStyleBackColor = true;
-            this.ImportBtn.Click += new System.EventHandler(this.ImportBtn_Click);
-            // 
-            // ExportBtn
-            // 
-            this.ExportBtn.Location = new System.Drawing.Point(567, 94);
-            this.ExportBtn.Name = "ExportBtn";
-            this.ExportBtn.Size = new System.Drawing.Size(75, 23);
-            this.ExportBtn.TabIndex = 3;
-            this.ExportBtn.Text = "Export";
-            this.ExportBtn.UseVisualStyleBackColor = true;
-            this.ExportBtn.Click += new System.EventHandler(this.ExportBtn_Click);
-            // 
-            // CheckBtn
-            // 
-            this.CheckBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CheckBtn.Location = new System.Drawing.Point(486, 65);
-            this.CheckBtn.Name = "CheckBtn";
-            this.CheckBtn.Size = new System.Drawing.Size(75, 23);
-            this.CheckBtn.TabIndex = 4;
-            this.CheckBtn.Text = "Check";
-            this.CheckBtn.UseVisualStyleBackColor = true;
-            this.CheckBtn.Click += new System.EventHandler(this.CheckBtn_Click);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.input9);
@@ -238,7 +209,7 @@
             this.panel1.Controls.Add(this.input2);
             this.panel1.Controls.Add(this.input1);
             this.panel1.Controls.Add(this.input);
-            this.panel1.Location = new System.Drawing.Point(486, 225);
+            this.panel1.Location = new System.Drawing.Point(552, 111);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(127, 194);
             this.panel1.TabIndex = 5;
@@ -346,20 +317,10 @@
             // 
             this.GameBoard.Location = new System.Drawing.Point(12, 56);
             this.GameBoard.Name = "GameBoard";
-            this.GameBoard.Size = new System.Drawing.Size(443, 363);
+            this.GameBoard.Size = new System.Drawing.Size(531, 409);
             this.GameBoard.TabIndex = 6;
             this.GameBoard.TabStop = false;
             this.GameBoard.Text = "Sudoku";
-            // 
-            // SolveBtn
-            // 
-            this.SolveBtn.Location = new System.Drawing.Point(486, 94);
-            this.SolveBtn.Name = "SolveBtn";
-            this.SolveBtn.Size = new System.Drawing.Size(75, 23);
-            this.SolveBtn.TabIndex = 10;
-            this.SolveBtn.Text = "Solve";
-            this.SolveBtn.UseVisualStyleBackColor = true;
-            this.SolveBtn.Click += new System.EventHandler(this.SolveBtn_Click);
             // 
             // timer1
             // 
@@ -368,32 +329,32 @@
             // 
             // MinuteLabel
             // 
-            this.MinuteLabel.Location = new System.Drawing.Point(514, 165);
+            this.MinuteLabel.Location = new System.Drawing.Point(580, 55);
             this.MinuteLabel.Name = "MinuteLabel";
-            this.MinuteLabel.Size = new System.Drawing.Size(22, 23);
+            this.MinuteLabel.Size = new System.Drawing.Size(24, 23);
             this.MinuteLabel.TabIndex = 11;
             this.MinuteLabel.Text = "00";
             // 
             // SecondLabel
             // 
-            this.SecondLabel.Location = new System.Drawing.Point(546, 166);
+            this.SecondLabel.Location = new System.Drawing.Point(612, 56);
             this.SecondLabel.Name = "SecondLabel";
-            this.SecondLabel.Size = new System.Drawing.Size(28, 23);
+            this.SecondLabel.Size = new System.Drawing.Size(30, 23);
             this.SecondLabel.TabIndex = 12;
             this.SecondLabel.Text = "00";
             // 
             // HourLabel
             // 
-            this.HourLabel.Location = new System.Drawing.Point(483, 166);
+            this.HourLabel.Location = new System.Drawing.Point(549, 56);
             this.HourLabel.Name = "HourLabel";
-            this.HourLabel.Size = new System.Drawing.Size(24, 23);
+            this.HourLabel.Size = new System.Drawing.Size(26, 23);
             this.HourLabel.TabIndex = 13;
             this.HourLabel.Text = "00";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(501, 165);
+            this.label1.Location = new System.Drawing.Point(567, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(10, 13);
             this.label1.TabIndex = 14;
@@ -402,28 +363,74 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(536, 166);
+            this.label2.Location = new System.Drawing.Point(602, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(10, 13);
             this.label2.TabIndex = 15;
             this.label2.Text = ":";
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton3,
+            this.toolStripButton4});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(691, 25);
+            this.toolStrip1.TabIndex = 16;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(60, 22);
+            this.toolStripButton1.Text = "Check";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(55, 22);
+            this.toolStripButton2.Text = "Solve";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(63, 22);
+            this.toolStripButton3.Text = "Import";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(60, 22);
+            this.toolStripButton4.Text = "Export";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 458);
+            this.ClientSize = new System.Drawing.Size(691, 477);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.HourLabel);
             this.Controls.Add(this.SecondLabel);
             this.Controls.Add(this.MinuteLabel);
-            this.Controls.Add(this.SolveBtn);
             this.Controls.Add(this.GameBoard);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.CheckBtn);
-            this.Controls.Add(this.ExportBtn);
-            this.Controls.Add(this.ImportBtn);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -431,6 +438,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -440,9 +449,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newGameToolStripMenuItem;
-        private System.Windows.Forms.Button ImportBtn;
-        private System.Windows.Forms.Button ExportBtn;
-        private System.Windows.Forms.Button CheckBtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button input9;
         private System.Windows.Forms.Button input8;
@@ -455,7 +461,6 @@
         private System.Windows.Forms.Button input1;
         private System.Windows.Forms.Button input;
         private System.Windows.Forms.GroupBox GameBoard;
-        private System.Windows.Forms.Button SolveBtn;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label MinuteLabel;
         private System.Windows.Forms.Label SecondLabel;
@@ -475,6 +480,11 @@
         private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
     }
 }
 

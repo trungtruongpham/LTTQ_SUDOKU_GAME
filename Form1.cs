@@ -21,17 +21,6 @@ namespace SudokuG
             BoardGame = new BoardGameManager(GameBoard);
             BoardGame.createBoard();
         }
-        #region ImportExportFile
-        private void ImportBtn_Click(object sender, EventArgs e)
-        {
-            BoardGame.ImportData();
-        }
-
-        private void ExportBtn_Click(object sender, EventArgs e)
-        {
-            BoardGame.Export();
-        }
-        #endregion
 
         #region Function
         private void buttonInput_Click(object sender, EventArgs e)
@@ -54,10 +43,6 @@ namespace SudokuG
             }
         }
 
-        private void SolveBtn_Click(object sender, EventArgs e)
-        {
-            BoardGame.Solve();
-        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             int sec = int.Parse(SecondLabel.Text);
@@ -89,28 +74,6 @@ namespace SudokuG
                 HourLabel.Text = "0" + hour;
             else
                 HourLabel.Text = hour.ToString();
-        }
-
-        private void CheckBtn_Click(object sender, EventArgs e)
-        {
-            //Kiểm tra xem giá trị nhập vào có đúng không
-            if (BoardGame.checkInput() == false)
-                MessageBox.Show("Ban da nhap sai !");
-            //Kiểm tra xem người chơi đã chiến thắng chưa
-            if (BoardGame.checkGameCompleted())
-            {
-                DialogResult result = MessageBox.Show("Game completed ! Bạn có muốn tiếp tục chơi không ?", "Thông báo", MessageBoxButtons.YesNoCancel);
-                if (result == DialogResult.Yes)
-                {
-                    BoardGame.ClearSudoku();
-                    BoardGame.CreateSudoku(BoardGame.numofEmpty);
-                    timer1.Start();
-                }
-                else if (result == DialogResult.No)
-                {
-                    this.Close();
-                }
-            }
         }
         #endregion
 
@@ -158,5 +121,45 @@ namespace SudokuG
                 MessageBox.Show("Bạn phải trỏ vào ô cần xóa !");
         }
         #endregion
+
+        #region ToolStrip
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            //Kiểm tra xem giá trị nhập vào có đúng không
+            if (BoardGame.checkInput() == false)
+                MessageBox.Show("Ban da nhap sai !");
+            //Kiểm tra xem người chơi đã chiến thắng chưa
+            if (BoardGame.checkGameCompleted())
+            {
+                DialogResult result = MessageBox.Show("Game completed ! Bạn có muốn tiếp tục chơi không ?", "Thông báo", MessageBoxButtons.YesNoCancel);
+                if (result == DialogResult.Yes)
+                {
+                    BoardGame.ClearSudoku();
+                    BoardGame.CreateSudoku(BoardGame.numofEmpty);
+                    timer1.Start();
+                }
+                else if (result == DialogResult.No)
+                {
+                    this.Close();
+                }
+            }
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            BoardGame.Solve();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            BoardGame.ImportData();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            BoardGame.Export();
+        }
+        #endregion
+
     }
 }

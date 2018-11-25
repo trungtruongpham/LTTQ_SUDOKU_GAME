@@ -11,7 +11,7 @@ namespace SudokuG
     class BoardGameManager
     {
         public Button[][] b;
-        public int sz = 35;
+        public int sz = 40;
         public int n = 9;
         public GroupBox box;
         public int numofEmpty = 0;
