@@ -234,8 +234,8 @@ namespace SudokuG
             Random ran1 = new Random();
             for (int i = 0; i < 50; i++)
             {
-                int i1 = ran1.Next(1, 9);
-                int i2 = ran1.Next(1, 9);
+                int i1 = ran1.Next(0, 9);
+                int i2 = ran1.Next(0, 9);
                 a[i1][i2] = 0 ;
             }
             for (int i = 0; i < 9; i++)
