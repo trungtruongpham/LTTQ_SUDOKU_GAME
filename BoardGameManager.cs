@@ -14,7 +14,7 @@ namespace SudokuG
         public int sz = 40;
         public int n = 9;
         public GroupBox box;
-        public int numofEmpty = 0;
+        public int numofEmpty = 50;
         public int currentX = -1;
 
         public int currentY = -1;
@@ -219,7 +219,7 @@ namespace SudokuG
             {
                 Random rand = new Random(Guid.NewGuid().GetHashCode());
                 Random rand2 = new Random(Guid.NewGuid().GetHashCode());
-                ChangeTwoCell(ref grid, rand.Next(1, 10), rand2.Next(1, 10));
+                ChangeTwoCell(ref grid, rand.Next(2, 10), rand2.Next(2, 10));
             }
         }
         public void CreateSudoku(int numOfEmpty)
@@ -232,10 +232,10 @@ namespace SudokuG
             Init(ref a);
             Update(ref a, 10);
             Random ran1 = new Random();
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < numofEmpty; i++)
             {
-                int i1 = ran1.Next(1, 9);
-                int i2 = ran1.Next(1, 9);
+                int i1 = ran1.Next(0, 9);
+                int i2 = ran1.Next(0, 9);
                 a[i1][i2] = 0 ;
             }
             for (int i = 0; i < 9; i++)
@@ -298,7 +298,10 @@ namespace SudokuG
                     for (int j = 0; j < 9; j++)
                     {
                         if (a[i][j] != 0)
+                        {
                             b[i][j].Text = a[i][j].ToString();
+                            b[i][j].ForeColor = Color.FromName("red");
+                        }
                     }
                 }
             }
