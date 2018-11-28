@@ -234,8 +234,8 @@ namespace SudokuG
             Random ran1 = new Random();
             for (int i = 0; i < 50; i++)
             {
-                int i1 = ran1.Next(1, 9);
-                int i2 = ran1.Next(1, 9);
+                int i1 = ran1.Next(0, 9);
+                int i2 = ran1.Next(0, 9);
                 a[i1][i2] = 0 ;
             }
             for (int i = 0; i < 9; i++)
@@ -243,9 +243,12 @@ namespace SudokuG
                 for (int j = 0; j < 9; j++)
                 {
                     if (a[i][j] == 0)
-                        b[i][i].Text = " ";
+                        b[i][j].Text = " ";
                     else
+                    {
                         b[i][j].Text = a[i][j].ToString();
+                        b[i][j].ForeColor = Color.FromName("Red");
+                    }
                 }
             }
         }
@@ -260,6 +263,7 @@ namespace SudokuG
                 for (int j = 0; j < 9; j++)
                 {
                     b[i][j].Text = " ";
+                    b[i][j].ForeColor = Color.FromName("Black");
                 } 
             }
         }
