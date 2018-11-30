@@ -20,7 +20,6 @@ namespace SudokuG
             InitializeComponent();
             BoardGame = new BoardGameManager(GameBoard);
             BoardGame.createBoard();
-            MessageBox.Show("Moi ban chon do kho");
         }
 
         #region Function
@@ -164,7 +163,6 @@ namespace SudokuG
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Moi ban chon do kho");
         }
     }
 }
