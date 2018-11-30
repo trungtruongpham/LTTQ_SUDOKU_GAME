@@ -165,9 +165,9 @@ namespace SudokuG
         {
             Button bt = (Button)sender;
             int x = int.Parse(bt.Location.X.ToString());
-            x = x / 35 - 1;
+            x = x / sz - 1;
             int y = int.Parse(bt.Location.Y.ToString());
-            y = y / 35 - 1;
+            y = y / sz - 1;
             currentX = x;
             currentY = y;
         }
@@ -219,7 +219,7 @@ namespace SudokuG
             {
                 Random rand = new Random(Guid.NewGuid().GetHashCode());
                 Random rand2 = new Random(Guid.NewGuid().GetHashCode());
-                ChangeTwoCell(ref grid, rand.Next(2, 10), rand2.Next(2, 10));
+                ChangeTwoCell(ref grid, rand.Next(1, 10), rand2.Next(1, 10));
             }
         }
         public void CreateSudoku(int numOfEmpty)
