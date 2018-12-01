@@ -82,7 +82,12 @@ namespace SudokuG
         {
             BoardGame.ClearSudoku();
             BoardGame.CreateSudoku(BoardGame.numofEmpty);
+
+            //Reset đồng hồ mỗi khi new game
             timer1.Start();
+            SecondLabel.Text = "0";
+            MinuteLabel.Text = "0";
+            HourLabel.Text = "0";
         }
         private void aboutUsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -163,6 +168,16 @@ namespace SudokuG
 
         private void Form1_Load(object sender, EventArgs e)
         {
+        }
+        private void Reset()
+        {
+            timer1.Stop();
+            timer1.Start();
+        }
+
+        private void howToPlayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Complete the Sudoku puzzle so that each and every row, column, and region contains the numbers one through nine only once.");
         }
     }
 }
