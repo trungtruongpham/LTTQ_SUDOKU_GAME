@@ -46,7 +46,10 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.howToPlayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.input9 = new System.Windows.Forms.Button();
             this.input8 = new System.Windows.Forms.Button();
             this.input7 = new System.Windows.Forms.Button();
@@ -56,7 +59,6 @@
             this.input3 = new System.Windows.Forms.Button();
             this.input2 = new System.Windows.Forms.Button();
             this.input1 = new System.Windows.Forms.Button();
-            this.input = new System.Windows.Forms.Button();
             this.GameBoard = new System.Windows.Forms.GroupBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.MinuteLabel = new System.Windows.Forms.Label();
@@ -69,10 +71,16 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.howToPlayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -195,12 +203,22 @@
             // 
             this.aboutUsToolStripMenuItem.Name = "aboutUsToolStripMenuItem";
             this.aboutUsToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.aboutUsToolStripMenuItem.Text = "About us";
             this.aboutUsToolStripMenuItem.Click += new System.EventHandler(this.aboutUsToolStripMenuItem_Click);
             // 
+            // howToPlayToolStripMenuItem
+            // 
+            this.howToPlayToolStripMenuItem.Name = "howToPlayToolStripMenuItem";
+            this.howToPlayToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.howToPlayToolStripMenuItem.Text = "How to play";
+            this.howToPlayToolStripMenuItem.Click += new System.EventHandler(this.howToPlayToolStripMenuItem_Click);
+            // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.input9);
             this.panel1.Controls.Add(this.input8);
             this.panel1.Controls.Add(this.input7);
@@ -210,15 +228,32 @@
             this.panel1.Controls.Add(this.input3);
             this.panel1.Controls.Add(this.input2);
             this.panel1.Controls.Add(this.input1);
-            this.panel1.Controls.Add(this.input);
-            this.panel1.Location = new System.Drawing.Point(552, 111);
+            this.panel1.Location = new System.Drawing.Point(520, 270);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(127, 194);
+            this.panel1.Size = new System.Drawing.Size(127, 189);
             this.panel1.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(21, 37);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(37, 23);
+            this.button1.TabIndex = 20;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(32, 7);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 23);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Input";
             // 
             // input9
             // 
-            this.input9.Location = new System.Drawing.Point(75, 119);
+            this.input9.Location = new System.Drawing.Point(69, 153);
             this.input9.Name = "input9";
             this.input9.Size = new System.Drawing.Size(37, 23);
             this.input9.TabIndex = 9;
@@ -228,7 +263,7 @@
             // 
             // input8
             // 
-            this.input8.Location = new System.Drawing.Point(75, 90);
+            this.input8.Location = new System.Drawing.Point(69, 124);
             this.input8.Name = "input8";
             this.input8.Size = new System.Drawing.Size(37, 23);
             this.input8.TabIndex = 8;
@@ -238,7 +273,7 @@
             // 
             // input7
             // 
-            this.input7.Location = new System.Drawing.Point(75, 61);
+            this.input7.Location = new System.Drawing.Point(69, 95);
             this.input7.Name = "input7";
             this.input7.Size = new System.Drawing.Size(37, 23);
             this.input7.TabIndex = 7;
@@ -248,7 +283,7 @@
             // 
             // input6
             // 
-            this.input6.Location = new System.Drawing.Point(75, 32);
+            this.input6.Location = new System.Drawing.Point(69, 66);
             this.input6.Name = "input6";
             this.input6.Size = new System.Drawing.Size(37, 23);
             this.input6.TabIndex = 6;
@@ -258,7 +293,7 @@
             // 
             // input5
             // 
-            this.input5.Location = new System.Drawing.Point(12, 148);
+            this.input5.Location = new System.Drawing.Point(69, 37);
             this.input5.Name = "input5";
             this.input5.Size = new System.Drawing.Size(37, 23);
             this.input5.TabIndex = 5;
@@ -268,7 +303,7 @@
             // 
             // input4
             // 
-            this.input4.Location = new System.Drawing.Point(12, 119);
+            this.input4.Location = new System.Drawing.Point(20, 153);
             this.input4.Name = "input4";
             this.input4.Size = new System.Drawing.Size(37, 23);
             this.input4.TabIndex = 4;
@@ -278,7 +313,7 @@
             // 
             // input3
             // 
-            this.input3.Location = new System.Drawing.Point(12, 90);
+            this.input3.Location = new System.Drawing.Point(20, 124);
             this.input3.Name = "input3";
             this.input3.Size = new System.Drawing.Size(37, 23);
             this.input3.TabIndex = 3;
@@ -288,7 +323,7 @@
             // 
             // input2
             // 
-            this.input2.Location = new System.Drawing.Point(12, 61);
+            this.input2.Location = new System.Drawing.Point(20, 95);
             this.input2.Name = "input2";
             this.input2.Size = new System.Drawing.Size(37, 23);
             this.input2.TabIndex = 2;
@@ -298,7 +333,7 @@
             // 
             // input1
             // 
-            this.input1.Location = new System.Drawing.Point(12, 32);
+            this.input1.Location = new System.Drawing.Point(20, 66);
             this.input1.Name = "input1";
             this.input1.Size = new System.Drawing.Size(37, 23);
             this.input1.TabIndex = 1;
@@ -306,20 +341,11 @@
             this.input1.UseVisualStyleBackColor = true;
             this.input1.Click += new System.EventHandler(this.buttonInput_Click);
             // 
-            // input
-            // 
-            this.input.Location = new System.Drawing.Point(25, 3);
-            this.input.Name = "input";
-            this.input.Size = new System.Drawing.Size(75, 23);
-            this.input.TabIndex = 0;
-            this.input.Text = "input";
-            this.input.UseVisualStyleBackColor = true;
-            // 
             // GameBoard
             // 
-            this.GameBoard.Location = new System.Drawing.Point(12, 56);
+            this.GameBoard.Location = new System.Drawing.Point(6, 50);
             this.GameBoard.Name = "GameBoard";
-            this.GameBoard.Size = new System.Drawing.Size(531, 409);
+            this.GameBoard.Size = new System.Drawing.Size(463, 409);
             this.GameBoard.TabIndex = 6;
             this.GameBoard.TabStop = false;
             this.GameBoard.Text = "Sudoku";
@@ -331,32 +357,39 @@
             // 
             // MinuteLabel
             // 
-            this.MinuteLabel.Location = new System.Drawing.Point(580, 55);
+            this.MinuteLabel.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MinuteLabel.Location = new System.Drawing.Point(55, 8);
             this.MinuteLabel.Name = "MinuteLabel";
-            this.MinuteLabel.Size = new System.Drawing.Size(24, 23);
+            this.MinuteLabel.Size = new System.Drawing.Size(49, 20);
             this.MinuteLabel.TabIndex = 11;
             this.MinuteLabel.Text = "00";
+            this.MinuteLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SecondLabel
             // 
-            this.SecondLabel.Location = new System.Drawing.Point(612, 56);
+            this.SecondLabel.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SecondLabel.Location = new System.Drawing.Point(104, 8);
             this.SecondLabel.Name = "SecondLabel";
-            this.SecondLabel.Size = new System.Drawing.Size(30, 23);
+            this.SecondLabel.Size = new System.Drawing.Size(38, 19);
             this.SecondLabel.TabIndex = 12;
             this.SecondLabel.Text = "00";
+            this.SecondLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // HourLabel
             // 
-            this.HourLabel.Location = new System.Drawing.Point(549, 56);
+            this.HourLabel.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HourLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.HourLabel.Location = new System.Drawing.Point(19, 8);
             this.HourLabel.Name = "HourLabel";
-            this.HourLabel.Size = new System.Drawing.Size(26, 23);
+            this.HourLabel.Size = new System.Drawing.Size(34, 19);
             this.HourLabel.TabIndex = 13;
             this.HourLabel.Text = "00";
+            this.HourLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(567, 55);
+            this.label1.Location = new System.Drawing.Point(561, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(10, 13);
             this.label1.TabIndex = 14;
@@ -365,11 +398,13 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(602, 56);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(94, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(10, 13);
+            this.label2.Size = new System.Drawing.Size(17, 23);
             this.label2.TabIndex = 15;
             this.label2.Text = ":";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // toolStrip1
             // 
@@ -420,36 +455,85 @@
             this.toolStripButton4.Text = "Export";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
-            // howToPlayToolStripMenuItem
+            // label3
             // 
-            this.howToPlayToolStripMenuItem.Name = "howToPlayToolStripMenuItem";
-            this.howToPlayToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.howToPlayToolStripMenuItem.Text = "How to play";
-            this.howToPlayToolStripMenuItem.Click += new System.EventHandler(this.howToPlayToolStripMenuItem_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(49, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(17, 23);
+            this.label3.TabIndex = 17;
+            this.label3.Text = ":";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.HourLabel);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.SecondLabel);
+            this.panel2.Controls.Add(this.MinuteLabel);
+            this.panel2.Location = new System.Drawing.Point(503, 56);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(160, 41);
+            this.panel2.TabIndex = 18;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(503, 103);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(503, 103);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(691, 477);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.HourLabel);
-            this.Controls.Add(this.SecondLabel);
-            this.Controls.Add(this.MinuteLabel);
             this.Controls.Add(this.GameBoard);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Sudoku";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -468,8 +552,6 @@
         private System.Windows.Forms.Button input4;
         private System.Windows.Forms.Button input3;
         private System.Windows.Forms.Button input2;
-        private System.Windows.Forms.Button input1;
-        private System.Windows.Forms.Button input;
         private System.Windows.Forms.GroupBox GameBoard;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label MinuteLabel;
@@ -496,6 +578,13 @@
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripMenuItem howToPlayToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button input1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SudokuG;
+using System.Threading;
 namespace SudokuG
 {
     public partial class Form1 : Form
@@ -88,6 +89,8 @@ namespace SudokuG
             SecondLabel.Text = "0";
             MinuteLabel.Text = "0";
             HourLabel.Text = "0";
+
+            pictureBox1.Visible = true;
         }
         private void aboutUsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -136,12 +139,20 @@ namespace SudokuG
             //Kiểm tra xem người chơi đã chiến thắng chưa
             if (BoardGame.checkGameCompleted())
             {
+                //Thay hình ảnh khi thắng
+                pictureBox2.Visible = true;
+                pictureBox1.Visible = false;
                 DialogResult result = MessageBox.Show("Game completed ! Bạn có muốn tiếp tục chơi không ?", "Thông báo", MessageBoxButtons.YesNoCancel);
+
                 if (result == DialogResult.Yes)
                 {
+                    //Tạo game mới và reset đồng hồ
                     BoardGame.ClearSudoku();
                     BoardGame.CreateSudoku(BoardGame.numofEmpty);
                     timer1.Start();
+
+                    pictureBox2.Visible = false;
+                    pictureBox1.Visible = true;
                 }
                 else if (result == DialogResult.No)
                 {
@@ -166,9 +177,6 @@ namespace SudokuG
         }
         #endregion
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-        }
         private void Reset()
         {
             timer1.Stop();

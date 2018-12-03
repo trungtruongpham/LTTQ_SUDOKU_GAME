@@ -156,7 +156,8 @@ namespace SudokuG
                     b[i][j].ForeColor = Color.FromName("Black");
                     b[i][j].Location = new Point(i * sz + sz, j * sz + sz);
                     b[i][j].Click += new EventHandler(button_Click);
-                    b[i][j].Font = new Font(b[i][j].Font, FontStyle.Bold);
+                    //b[i][j].Font = new Font(b[i][j].Font, FontStyle.Bold);
+                    b[i][j].Font = new Font("Microsoft Sans Serif", 12);
                     box.Controls.Add(b[i][j]);
                 }
             }
