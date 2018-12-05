@@ -78,38 +78,24 @@ namespace SudokuG
         }
         #endregion
 
-        #region MenuStrip
+        #region MenuStrip-Menu
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewGameNormal();
+        }
+
+        private void NewGameNormal()
         {
             BoardGame.ClearSudoku();
             BoardGame.CreateSudoku(BoardGame.numofEmpty);
 
             //Reset đồng hồ mỗi khi new game
             timer1.Start();
-            SecondLabel.Text = "0";
-            MinuteLabel.Text = "0";
-            HourLabel.Text = "0";
+            SecondLabel.Text = "00";
+            MinuteLabel.Text = "00";
+            HourLabel.Text = "00";
 
             pictureBox1.Visible = true;
-        }
-        private void aboutUsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Sudoku Game version 1.0");
-        }
-
-        private void easyToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            BoardGame.numofEmpty = 20;
-        }
-
-        private void mediumToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            BoardGame.numofEmpty = 40;
-        }
-
-        private void hardToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            BoardGame.numofEmpty = 60;
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -127,6 +113,111 @@ namespace SudokuG
             }
             else
                 MessageBox.Show("Bạn phải trỏ vào ô cần xóa !");
+        }
+
+        #endregion
+
+        #region MenuStrip-Mode
+        private void easyToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            BoardGame.numofEmpty = 40;
+            NewGameNormal();
+        }
+
+        private void mediumToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            BoardGame.numofEmpty = 50;
+            NewGameNormal();
+        }
+
+        private void hardToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            BoardGame.numofEmpty = 60;
+            NewGameNormal();
+        }
+
+        private void easyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SecondLabel.Text = "00";
+            MinuteLabel.Text = "10";
+            HourLabel.Text = "00";
+            BoardGame.ClearSudoku();
+            BoardGame.CreateSudoku(BoardGame.numofEmpty);
+
+            timer1.Stop();
+            timer2.Start();
+        }
+
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            int sec = int.Parse(SecondLabel.Text);
+            int min = int.Parse(MinuteLabel.Text);
+            int hour = int.Parse(HourLabel.Text);
+            if (sec == 0)
+            {
+                sec = 59;
+                min--;
+            }
+            sec--;
+            //Chuyển dữ liệu vào label sau khi thời gian được chuẩn hóa
+            if (sec < 10)
+                SecondLabel.Text = "0" + sec;
+            else
+                SecondLabel.Text = sec.ToString();
+            if (sec < 10)
+                MinuteLabel.Text = "0" + min;
+            else
+                MinuteLabel.Text = min.ToString();
+            if (hour < 10)
+                HourLabel.Text = "0" + hour;
+            else
+                HourLabel.Text = hour.ToString();
+
+            if (min == 0 && sec == 0)
+            {
+                timer2.Stop();
+                if (BoardGame.checkGameCompleted())
+                    MessageBox.Show("Cogratulation, You are winner!!!");
+                else
+                    MessageBox.Show("Sorry, You are failed.");
+            }
+
+        }
+
+        private void mediumToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SecondLabel.Text = "00";
+            MinuteLabel.Text = "05";
+            HourLabel.Text = "00";
+            BoardGame.ClearSudoku();
+            BoardGame.CreateSudoku(BoardGame.numofEmpty);
+
+            timer1.Stop();
+            timer2.Start();
+        }
+
+        private void hardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SecondLabel.Text = "00";
+            MinuteLabel.Text = "03";
+            HourLabel.Text = "00";
+            BoardGame.ClearSudoku();
+            BoardGame.CreateSudoku(BoardGame.numofEmpty);
+
+            timer1.Stop();
+            timer2.Start();
+        }
+        #endregion
+
+        #region MenuStrip-Help
+        private void aboutUsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sudoku Game version 1.0");
+        }
+        private void howToPlayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Complete the Sudoku puzzle so that each and every row, column, and region contains the numbers one through nine only once.");
         }
         #endregion
 
@@ -177,15 +268,6 @@ namespace SudokuG
         }
         #endregion
 
-        private void Reset()
-        {
-            timer1.Stop();
-            timer1.Start();
-        }
-
-        private void howToPlayToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Complete the Sudoku puzzle so that each and every row, column, and region contains the numbers one through nine only once.");
-        }
+        
     }
 }

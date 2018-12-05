@@ -79,5 +79,25 @@ namespace LTTQ_SUDOKU_GAME.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon sudoku_puzzle_game_math_riddle_512__1__8uC_icon {
+            get {
+                object obj = ResourceManager.GetObject("sudoku_puzzle_game_math_riddle_512__1__8uC_icon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon sudoku_puzzle_game_math_riddle_512_Lq0_icon {
+            get {
+                object obj = ResourceManager.GetObject("sudoku_puzzle_game_math_riddle_512_Lq0_icon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
     }
 }

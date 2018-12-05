@@ -16,7 +16,6 @@ namespace SudokuG
         public GroupBox box;
         public int numofEmpty = 50;
         public int currentX = -1;
-
         public int currentY = -1;
 
         public BoardGameManager(GroupBox box1)

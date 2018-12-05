@@ -90,5 +90,14 @@
   <ItemGroup>
     <None Include="Properties\ff3bbfb5-success-map_06b07v06b07v000000.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sudoku-puzzle-game-math-riddle-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sudoku_puzzle_game_math_riddle_512_Lq0_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sudoku_puzzle_game_math_riddle_512__1__8uC_icon.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
