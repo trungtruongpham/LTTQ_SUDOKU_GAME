@@ -15,6 +15,7 @@ namespace SudokuG
     {
         #region Properties
         BoardGameManager BoardGame;
+        int mode = 0;
         #endregion
         public Form1()
         {
@@ -81,21 +82,21 @@ namespace SudokuG
         #region MenuStrip-Menu
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NewGameNormal();
-        }
+            if (mode == 1)
+            {
+                NewGameNormal();
+            }
+            else
+            {
+                SecondLabel.Text = "00";
+                MinuteLabel.Text = "10";
+                HourLabel.Text = "00";
+                BoardGame.ClearSudoku();
+                BoardGame.CreateSudoku(BoardGame.numofEmpty);
 
-        private void NewGameNormal()
-        {
-            BoardGame.ClearSudoku();
-            BoardGame.CreateSudoku(BoardGame.numofEmpty);
-
-            //Reset đồng hồ mỗi khi new game
-            timer1.Start();
-            SecondLabel.Text = "00";
-            MinuteLabel.Text = "00";
-            HourLabel.Text = "00";
-
-            pictureBox1.Visible = true;
+                timer1.Stop();
+                timer2.Start();
+            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -112,28 +113,46 @@ namespace SudokuG
                 BoardGame.b[x][y].Text = " ";
             }
             else
-                MessageBox.Show("Bạn phải trỏ vào ô cần xóa !");
+                MessageBox.Show("You must point to the box to delete !");
         }
 
         #endregion
 
         #region MenuStrip-Mode
+        private void NewGameNormal()
+        {
+            BoardGame.ClearSudoku();
+            BoardGame.CreateSudoku(BoardGame.numofEmpty);
+
+            //Reset đồng hồ mỗi khi new game
+            timer1.Start();
+            timer2.Stop();
+            SecondLabel.Text = "00";
+            MinuteLabel.Text = "00";
+            HourLabel.Text = "00";
+
+            pictureBox1.Visible = true;
+        }
+
         private void easyToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             BoardGame.numofEmpty = 40;
             NewGameNormal();
+            mode = 1;
         }
 
         private void mediumToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             BoardGame.numofEmpty = 50;
             NewGameNormal();
+            mode = 1;
         }
 
         private void hardToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             BoardGame.numofEmpty = 60;
             NewGameNormal();
+            mode = 1; 
         }
 
         private void easyToolStripMenuItem_Click(object sender, EventArgs e)
@@ -143,6 +162,7 @@ namespace SudokuG
             HourLabel.Text = "00";
             BoardGame.ClearSudoku();
             BoardGame.CreateSudoku(BoardGame.numofEmpty);
+            mode = 2;
 
             timer1.Stop();
             timer2.Start();
@@ -180,7 +200,7 @@ namespace SudokuG
                 if (BoardGame.checkGameCompleted())
                     MessageBox.Show("Cogratulation, You are winner!!!");
                 else
-                    MessageBox.Show("Sorry, You are failed.");
+                    MessageBox.Show("Sorry, You failed.");
             }
 
         }
@@ -192,6 +212,7 @@ namespace SudokuG
             HourLabel.Text = "00";
             BoardGame.ClearSudoku();
             BoardGame.CreateSudoku(BoardGame.numofEmpty);
+            mode = 2;
 
             timer1.Stop();
             timer2.Start();
@@ -204,6 +225,7 @@ namespace SudokuG
             HourLabel.Text = "00";
             BoardGame.ClearSudoku();
             BoardGame.CreateSudoku(BoardGame.numofEmpty);
+            mode = 2;
 
             timer1.Stop();
             timer2.Start();
@@ -226,14 +248,14 @@ namespace SudokuG
         {
             //Kiểm tra xem giá trị nhập vào có đúng không
             if (BoardGame.checkInput() == false)
-                MessageBox.Show("Ban da nhap sai !");
+                MessageBox.Show("You entered wrong !");
             //Kiểm tra xem người chơi đã chiến thắng chưa
             if (BoardGame.checkGameCompleted())
             {
                 //Thay hình ảnh khi thắng
                 pictureBox2.Visible = true;
                 pictureBox1.Visible = false;
-                DialogResult result = MessageBox.Show("Game completed ! Bạn có muốn tiếp tục chơi không ?", "Thông báo", MessageBoxButtons.YesNoCancel);
+                DialogResult result = MessageBox.Show("Game completed ! Do you want to continue play new game ?", "Notification", MessageBoxButtons.YesNoCancel);
 
                 if (result == DialogResult.Yes)
                 {
@@ -268,6 +290,5 @@ namespace SudokuG
         }
         #endregion
 
-        
     }
 }
