@@ -93,6 +93,56 @@ namespace LTTQ_SUDOKU_GAME.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _9714 {
+            get {
+                object obj = ResourceManager.GetObject("9714", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9715 {
+            get {
+                object obj = ResourceManager.GetObject("9715", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9716 {
+            get {
+                object obj = ResourceManager.GetObject("9716", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9717 {
+            get {
+                object obj = ResourceManager.GetObject("9717", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9718 {
+            get {
+                object obj = ResourceManager.GetObject("9718", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ff3bbfb5_success_map_06b07v06b07v0000001 {
             get {
                 object obj = ResourceManager.GetObject("ff3bbfb5-success-map_06b07v06b07v0000001", resourceCulture);
@@ -116,6 +166,36 @@ namespace LTTQ_SUDOKU_GAME.Properties {
         internal static System.Drawing.Bitmap ff3bbfb5_success_map_06b07v06b07v0000003 {
             get {
                 object obj = ResourceManager.GetObject("ff3bbfb5-success-map_06b07v06b07v0000003", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ff3bbfb5_success_map_06b07v06b07v0000004 {
+            get {
+                object obj = ResourceManager.GetObject("ff3bbfb5-success-map_06b07v06b07v0000004", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ff3bbfb5_success_map_06b07v06b07v0000005 {
+            get {
+                object obj = ResourceManager.GetObject("ff3bbfb5-success-map_06b07v06b07v0000005", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ff3bbfb5_success_map_06b07v06b07v0000006 {
+            get {
+                object obj = ResourceManager.GetObject("ff3bbfb5-success-map_06b07v06b07v0000006", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
