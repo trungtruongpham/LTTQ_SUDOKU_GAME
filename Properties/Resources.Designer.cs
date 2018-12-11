@@ -63,9 +63,9 @@ namespace LTTQ_SUDOKU_GAME.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _971 {
+        internal static System.Drawing.Bitmap _9711 {
             get {
-                object obj = ResourceManager.GetObject("_971", resourceCulture);
+                object obj = ResourceManager.GetObject("9711", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,49 @@ namespace LTTQ_SUDOKU_GAME.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ff3bbfb5_success_map_06b07v06b07v000000 {
+        internal static System.Drawing.Bitmap _9712 {
             get {
-                object obj = ResourceManager.GetObject("ff3bbfb5_success_map_06b07v06b07v000000", resourceCulture);
+                object obj = ResourceManager.GetObject("9712", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9713 {
+            get {
+                object obj = ResourceManager.GetObject("9713", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ff3bbfb5_success_map_06b07v06b07v0000001 {
+            get {
+                object obj = ResourceManager.GetObject("ff3bbfb5-success-map_06b07v06b07v0000001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ff3bbfb5_success_map_06b07v06b07v0000002 {
+            get {
+                object obj = ResourceManager.GetObject("ff3bbfb5-success-map_06b07v06b07v0000002", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ff3bbfb5_success_map_06b07v06b07v0000003 {
+            get {
+                object obj = ResourceManager.GetObject("ff3bbfb5-success-map_06b07v06b07v0000003", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
