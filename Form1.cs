@@ -271,18 +271,6 @@ namespace SudokuG
         {
             SetLanguage("vi-VN");
         }
-        //internal static global::System.Resources.ResourceManager ResourceManager
-        //{
-        //    get
-        //    {
-        //        if (object.ReferenceEquals(resourceMan, null))
-        //        {
-        //            global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LTTQ_SUDOKU_GAME.Resources", typeof(Form1).Assembly);
-        //            resourceMan = temp;
-        //        }
-        //        return resourceMan;
-        //    }
-        //}
         private void SetLanguage(string cultureName)
         {
             culture = CultureInfo.CreateSpecificCulture(cultureName);
@@ -346,9 +334,22 @@ namespace SudokuG
                 if (result == DialogResult.Yes)
                 {
                     //Tạo game mới và reset đồng hồ
-                    BoardGame.ClearSudoku();
-                    BoardGame.CreateSudoku(BoardGame.numofEmpty);
-                    timer1.Start();
+                    if(mode == 1)
+                    {
+                        NewGameNormal();
+                    }
+                    else if(mode == 2)
+                    {
+                        SecondLabel.Text = "00";
+                        MinuteLabel.Text = "10";
+                        HourLabel.Text = "00";
+                        BoardGame.ClearSudoku();
+                        BoardGame.CreateSudoku(BoardGame.numofEmpty);
+                        mode = 2;
+
+                        timer1.Stop();
+                        timer2.Start();
+                    }
 
                     pictureBox2.Visible = false;
                     pictureBox1.Visible = true;
@@ -375,25 +376,5 @@ namespace SudokuG
             BoardGame.Export();
         }
         #endregion
-
-        private void menuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            SetLanguage("en-US");
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            SetLanguage("vi-VN");
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
