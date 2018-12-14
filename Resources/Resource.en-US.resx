@@ -127,7 +127,7 @@
     <value>Classic</value>
   </data>
   <data name="cogratulation, You are winner!!!" xml:space="preserve">
-    <value>Cogratulation, You are winner!!!</value>
+    <value>Cogratulation, You are the winner!!!</value>
   </data>
   <data name="complete the Sudoku puzzle so that each and every row, column, and region contains the numbers one through nine only once" xml:space="preserve">
     <value>Complete the Sudoku puzzle so that each and every row, column, and region contains the numbers one through nine only once</value>
@@ -142,7 +142,7 @@
     <value>Exit</value>
   </data>
   <data name="game completed! Do you want to start a new game?" xml:space="preserve">
-    <value>Game completed! Do you want to “START A” new game</value>
+    <value>Game completed! Do you want to start a new game?</value>
   </data>
   <data name="hard" xml:space="preserve">
     <value>Hard</value>
@@ -184,7 +184,7 @@
     <value>Sorry, You failed.</value>
   </data>
   <data name="sudoku Game version 1.0" xml:space="preserve">
-    <value>Sudoku Game version 1.0</value>
+    <value>Sudoku version 1.0</value>
   </data>
   <data name="time attack" xml:space="preserve">
     <value>Time attack</value>
