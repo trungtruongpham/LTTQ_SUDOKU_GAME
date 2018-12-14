@@ -11,7 +11,6 @@ using SudokuG;
 using System.Threading;
 using System.Resources;
 using System.Globalization;
-using System.IO;
 namespace SudokuG
 {
     public partial class Form1 : Form
