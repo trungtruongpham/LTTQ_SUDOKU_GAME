@@ -338,14 +338,13 @@ namespace SudokuG
                     {
                         NewGameNormal();
                     }
-                    else if(mode == 2)
+                    else
                     {
                         SecondLabel.Text = "00";
                         MinuteLabel.Text = "10";
                         HourLabel.Text = "00";
                         BoardGame.ClearSudoku();
                         BoardGame.CreateSudoku(BoardGame.numofEmpty);
-                        mode = 2;
 
                         timer1.Stop();
                         timer2.Start();
