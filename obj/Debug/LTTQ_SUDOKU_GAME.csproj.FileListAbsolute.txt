@@ -15,3 +15,20 @@ C:\Users\Trung Truong\source\repos\LTTQ_SUDOKU_GAME\LTTQ_SUDOKU_GAME\obj\Debug\L
 C:\Users\Trung Truong\source\repos\LTTQ_SUDOKU_GAME\LTTQ_SUDOKU_GAME\obj\Debug\en-US\LTTQ_SUDOKU_GAME.resources.dll
 C:\Users\Trung Truong\source\repos\LTTQ_SUDOKU_GAME\LTTQ_SUDOKU_GAME\obj\Debug\vi-VN\LTTQ_SUDOKU_GAME.resources.dll
 C:\Users\Trung Truong\source\repos\LTTQ_SUDOKU_GAME\LTTQ_SUDOKU_GAME\obj\Debug\LTTQ_SUDOKU_GAME.Resources.Resource.resources
+D:\C#\LTTQ_SUDOKU_GAME\bin\Debug\LTTQ_SUDOKU_GAME.exe.config
+D:\C#\LTTQ_SUDOKU_GAME\bin\Debug\LTTQ_SUDOKU_GAME.exe
+D:\C#\LTTQ_SUDOKU_GAME\bin\Debug\LTTQ_SUDOKU_GAME.pdb
+D:\C#\LTTQ_SUDOKU_GAME\bin\Debug\en-US\LTTQ_SUDOKU_GAME.resources.dll
+D:\C#\LTTQ_SUDOKU_GAME\bin\Debug\vi-VN\LTTQ_SUDOKU_GAME.resources.dll
+D:\C#\LTTQ_SUDOKU_GAME\obj\Debug\LTTQ_SUDOKU_GAME.csprojAssemblyReference.cache
+D:\C#\LTTQ_SUDOKU_GAME\obj\Debug\SudokuG.Form1.resources
+D:\C#\LTTQ_SUDOKU_GAME\obj\Debug\LTTQ_SUDOKU_GAME.Properties.Resources.resources
+D:\C#\LTTQ_SUDOKU_GAME\obj\Debug\LTTQ_SUDOKU_GAME.Resources.Resource.resources
+D:\C#\LTTQ_SUDOKU_GAME\obj\Debug\LTTQ_SUDOKU_GAME.Resources.Resource.en-US.resources
+D:\C#\LTTQ_SUDOKU_GAME\obj\Debug\LTTQ_SUDOKU_GAME.Resources.Resource.vi-VN.resources
+D:\C#\LTTQ_SUDOKU_GAME\obj\Debug\LTTQ_SUDOKU_GAME.csproj.GenerateResource.cache
+D:\C#\LTTQ_SUDOKU_GAME\obj\Debug\LTTQ_SUDOKU_GAME.csproj.CoreCompileInputs.cache
+D:\C#\LTTQ_SUDOKU_GAME\obj\Debug\en-US\LTTQ_SUDOKU_GAME.resources.dll
+D:\C#\LTTQ_SUDOKU_GAME\obj\Debug\vi-VN\LTTQ_SUDOKU_GAME.resources.dll
+D:\C#\LTTQ_SUDOKU_GAME\obj\Debug\LTTQ_SUDOKU_GAME.exe
+D:\C#\LTTQ_SUDOKU_GAME\obj\Debug\LTTQ_SUDOKU_GAME.pdb
