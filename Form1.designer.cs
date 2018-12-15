@@ -190,34 +190,34 @@
             this.mediumToolStripMenuItem1,
             this.hardToolStripMenuItem1});
             this.ClassicToolStripMenuItem.Name = "ClassicToolStripMenuItem";
-            this.ClassicToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.ClassicToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ClassicToolStripMenuItem.Text = "Classic";
             // 
             // easyToolStripMenuItem1
             // 
             this.easyToolStripMenuItem1.Name = "easyToolStripMenuItem1";
-            this.easyToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
+            this.easyToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.easyToolStripMenuItem1.Text = "Easy";
             this.easyToolStripMenuItem1.Click += new System.EventHandler(this.easyToolStripMenuItem1_Click);
             // 
             // mediumToolStripMenuItem1
             // 
             this.mediumToolStripMenuItem1.Name = "mediumToolStripMenuItem1";
-            this.mediumToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
+            this.mediumToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.mediumToolStripMenuItem1.Text = "Medium";
             this.mediumToolStripMenuItem1.Click += new System.EventHandler(this.mediumToolStripMenuItem1_Click);
             // 
             // hardToolStripMenuItem1
             // 
             this.hardToolStripMenuItem1.Name = "hardToolStripMenuItem1";
-            this.hardToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
+            this.hardToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.hardToolStripMenuItem1.Text = "Hard";
             this.hardToolStripMenuItem1.Click += new System.EventHandler(this.hardToolStripMenuItem1_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(135, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(177, 6);
             // 
             // timeAttackToolStripMenuItem
             // 
@@ -226,7 +226,7 @@
             this.mediumToolStripMenuItem,
             this.hardToolStripMenuItem});
             this.timeAttackToolStripMenuItem.Name = "timeAttackToolStripMenuItem";
-            this.timeAttackToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.timeAttackToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.timeAttackToolStripMenuItem.Text = "Time Attack";
             // 
             // easyToolStripMenuItem
@@ -583,6 +583,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(691, 477);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
