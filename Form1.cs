@@ -33,20 +33,35 @@ namespace SudokuG
         private void buttonInput_Click(object sender, EventArgs e)
         {
             int x = BoardGame.currentX;
-            int y = BoardGame.currentY;
+            int y = BoardGame.currentY;      
             if (x >= 0 && y >= 0 && x <= 8 && y <= 8)
             {
                 Button bt = (Button)sender;
-                if (bt.Text != "0")
+                //Kiểm tra xem người chơi có đang ấn vào ô màu đỏ không
+                if (BoardGame.b[x][y].ForeColor == Color.FromName("red"))
+                {
+                    ResourceManager rm = new ResourceManager("LTTQ_SUDOKU_GAME.Resources.Resource", typeof(Form1).Assembly);
+                    string message1 = rm.GetString("you must choose the black box or empty box!", culture);
+                    string message2 = rm.GetString("notification", culture);
+                    MessageBox.Show(message1, message2);
+                }
+                else if (bt.Text != "0")
                 {
                     BoardGame.b[x][y].Text = bt.Text;
                 }
-                else
+                else if (bt.Text == "0")
                 {
                     BoardGame.b[x][y].Text = " ";
                 }
                 BoardGame.currentX = -1;
                 BoardGame.currentY = -1;
+            }
+            else
+            {
+                ResourceManager rm = new ResourceManager("LTTQ_SUDOKU_GAME.Resources.Resource", typeof(Form1).Assembly);
+                string message1 = rm.GetString("you must choose the box first", culture);
+                string message2 = rm.GetString("notification", culture);
+                MessageBox.Show(message1, message2);
             }
         }
 
@@ -220,8 +235,8 @@ namespace SudokuG
 
         private void mediumToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SecondLabel.Text = "00";
-            MinuteLabel.Text = "05";
+            SecondLabel.Text = "30";
+            MinuteLabel.Text = "07";
             HourLabel.Text = "00";
             BoardGame.ClearSudoku();
             BoardGame.CreateSudoku(BoardGame.numofEmpty);
@@ -234,7 +249,7 @@ namespace SudokuG
         private void hardToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SecondLabel.Text = "00";
-            MinuteLabel.Text = "03";
+            MinuteLabel.Text = "5";
             HourLabel.Text = "00";
             BoardGame.ClearSudoku();
             BoardGame.CreateSudoku(BoardGame.numofEmpty);
@@ -249,9 +264,10 @@ namespace SudokuG
         private void aboutUsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ResourceManager rm = new ResourceManager("LTTQ_SUDOKU_GAME.Resources.Resource", typeof(Form1).Assembly);
-            string message = rm.GetString("sudoku Game version 1.0", culture);
+            string message2 = rm.GetString("notification", culture);
+            string message1 = rm.GetString("sudoku Game version 1.0", culture);
 
-            MessageBox.Show(message);
+            MessageBox.Show(message1, message2);
         }
         private void howToPlayToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -362,7 +378,15 @@ namespace SudokuG
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            BoardGame.Solve();
+            if(BoardGame.CheckBoardInput() == true)
+                BoardGame.Solve();
+            else
+            {
+                ResourceManager rm = new ResourceManager("LTTQ_SUDOKU_GAME.Resources.Resource", typeof(Form1).Assembly);
+                string message1 = rm.GetString("you must start a new game first!", culture);
+                string message2 = rm.GetString("notification", culture);
+                MessageBox.Show(message1,message2);
+            }
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)

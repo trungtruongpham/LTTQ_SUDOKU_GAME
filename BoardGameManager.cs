@@ -14,7 +14,7 @@ namespace SudokuG
         public int sz = 40;
         public int n = 9;
         public GroupBox box;
-        public int numofEmpty = 50;
+        public int numofEmpty = 60;
         public int currentX = -1;
         public int currentY = -1;
 
@@ -87,24 +87,36 @@ namespace SudokuG
                 }
             }
         }
-        public void Solve()
+        public bool CheckBoardInput()
         {
-            int[][] temp = new int[9][];
-            for (int i = 0; i < 9; i++)
-            {
-                temp[i] = new int[9];
-            }
             for (int i = 0; i < 9; i++)
             {
                 for (int j = 0; j < 9; j++)
                 {
                     if (b[i][j].Text != " ")
-                        temp[i][j] = Convert.ToInt32(b[i][j].Text);
-                    else
-                        temp[i][j] = 0;
+                        return true;
                 }
             }
-            SolveSudoku(temp, 0, 0);
+            return false;
+        }
+        public void Solve()
+        {
+                int[][] temp = new int[9][];
+                for (int i = 0; i < 9; i++)
+                {
+                    temp[i] = new int[9];
+                }
+                for (int i = 0; i < 9; i++)
+                {
+                    for (int j = 0; j < 9; j++)
+                    {
+                        if (b[i][j].Text != " ")
+                            temp[i][j] = Convert.ToInt32(b[i][j].Text);
+                        else
+                            temp[i][j] = 0;
+                    }
+                }
+                SolveSudoku(temp, 0, 0);
         }
         #endregion
 
@@ -155,8 +167,7 @@ namespace SudokuG
                     b[i][j].ForeColor = Color.FromName("Black");
                     b[i][j].Location = new Point(i * sz + sz, j * sz + sz);
                     b[i][j].Click += new EventHandler(button_Click);
-                    //b[i][j].Font = new Font(b[i][j].Font, FontStyle.Bold);
-                    b[i][j].Font = new Font("Microsoft Sans Serif", 12);
+                    b[i][j].Font = new Font("Arial", 14, FontStyle.Bold);
                     box.Controls.Add(b[i][j]);
                 }
             }
@@ -170,6 +181,7 @@ namespace SudokuG
             y = y / sz - 1;
             currentX = x;
             currentY = y;
+
         }
         #endregion
 

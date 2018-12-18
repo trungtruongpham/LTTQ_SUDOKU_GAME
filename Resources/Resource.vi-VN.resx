@@ -198,6 +198,15 @@
   <data name="you have entered the wrong answer!" xml:space="preserve">
     <value>Bạn đã nhập sai đáp án.</value>
   </data>
+  <data name="you must choose the black box or empty box!" xml:space="preserve">
+    <value>Bạn phải trỏ vào ô màu đen hoặc ô trống!</value>
+  </data>
+  <data name="you must choose the box first" xml:space="preserve">
+    <value>Bạn phải trỏ vào ô cần thêm giá trị trước!</value>
+  </data>
+  <data name="you must start a new game first!" xml:space="preserve">
+    <value>Bạn cần bắt đầu một ván mới trước!</value>
+  </data>
   <data name="you need to indicate the box to delete!" xml:space="preserve">
     <value>Bạn cần trỏ vào ô cần xóa để xóa.</value>
   </data>

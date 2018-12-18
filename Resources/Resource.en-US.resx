@@ -198,6 +198,15 @@
   <data name="you have entered the wrong answer!" xml:space="preserve">
     <value>You have entered the wrong answer!</value>
   </data>
+  <data name="you must choose the black box or empty box!" xml:space="preserve">
+    <value>You must choose the black box or empty box!</value>
+  </data>
+  <data name="you must choose the box first" xml:space="preserve">
+    <value>You must choose the box first</value>
+  </data>
+  <data name="you must start a new game first!" xml:space="preserve">
+    <value>You must start a new game first!</value>
+  </data>
   <data name="you need to indicate the box to delete!" xml:space="preserve">
     <value>You need to indicate the box to delete!</value>
   </data>
