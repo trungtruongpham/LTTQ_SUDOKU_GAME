@@ -14,7 +14,7 @@ namespace SudokuG
         public int sz = 40;
         public int n = 9;
         public GroupBox box;
-        public int numofEmpty = 60;
+        public int numofEmpty = 50;
         public int currentX = -1;
         public int currentY = -1;
 
@@ -248,6 +248,11 @@ namespace SudokuG
             {
                 int i1 = ran1.Next(0, 9);
                 int i2 = ran1.Next(0, 9);
+
+                //Tru i de tranh bi lap random
+                if (a[i1][i2] == 0)
+                    i--;
+
                 a[i1][i2] = 0 ;
             }
             for (int i = 0; i < 9; i++)
