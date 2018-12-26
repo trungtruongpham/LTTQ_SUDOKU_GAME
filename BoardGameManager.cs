@@ -299,14 +299,14 @@ namespace SudokuG
                 int[][] a = new int[9][];
                 for (int i = 0; i < 9; i++)
                 {
-                    a[i] = new int[9];
+                    a[i] = new int[10];
                 }
                 for (int i = 0; i < 9; i++)
                 {
                     int j = 0;
                     foreach (var con in lines[i].Split(' '))
                     {
-                        a[i][j] = int.Parse(con);
+                        a[j][i] = int.Parse(con);
                         j++;
                     }
                 }
