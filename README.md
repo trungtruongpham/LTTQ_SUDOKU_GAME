@@ -15,5 +15,5 @@ III. Game được thiết kế với giao diện đơn giản và thân thiện
 5. Kiểm tra (Check)
 6. Lưu(Save) và mở(Open) các game đang chơi.
 
-IV. Hỗ trợ và giải đáp
+IV. Liên hệ và góp ý
 Xin vui lòng gửi mail về địa chỉ : trungtruongpham@mail.com
